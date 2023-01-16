@@ -1,6 +1,6 @@
 # T-Project
 
-Этот проект создан с целью рассказать о фильме команды Т22ЦГ-16.
+Этот проект был создан для того, чтобы рассказать об агрохолдинге команды Т22СХ2-08.
 
 ## Начало работы
 
@@ -14,13 +14,16 @@
 
 ### Установка
 
-1. Сначала вам нужно продублировать файлы из репозитория. Введите приведенную ниже команду в терминал или загрузите архив по [этой ссылке](https://github.com/lentryd/t-project/archive/refs/heads/main.zip).
+1. Сначала вам нужно продублировать файлы из репозитория. Введите приведенную ниже команду в терминал или загрузите архив по [этой ссылке](https://github.com/lentryd/t-project1/archive/refs/heads/main.zip).
+
 ```bash
-git clone https://github.com/lentryd/t-project.git
+git clone https://github.com/lentryd/t-project1.git
 ```
+
 2. Установите необходимые зависимости, введя приведенную ниже команду.
+
 ```bash
-npm i 
+npm i
 ```
 
 ## Проверка установки
@@ -44,7 +47,7 @@ npm run serve
 - [lentryd](https://github.com/lentryd)
 - [KucherAnton](https://github.com/KucherAnton)
 
-Смотрите также список [участников](https://github.com/lentryd/t-project/contributors), которые участвовали в этом проекте.
+Смотрите также список [участников](https://github.com/lentryd/t-project1/contributors), которые участвовали в этом проекте.
 
 ## Лицензия
 

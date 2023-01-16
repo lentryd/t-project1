@@ -3,7 +3,7 @@ workbox.core.skipWaiting();
 workbox.core.clientsClaim();
 
 // Кэширование данных
-workbox.core.setCacheNameDetails({ prefix: "t-project" });
+workbox.core.setCacheNameDetails({ prefix: "t-project1" });
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
