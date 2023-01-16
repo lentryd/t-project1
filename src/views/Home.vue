@@ -1,4 +1,17 @@
 <template>
+  <Parallax :path="require('@/assets/img/parallax_pic1.jpg')" position="center">
+    <div class="parallax__text">
+      Агрохолдинг «СТЕПЬ» — одна из крупнейших аграрных компаний юга России,
+      объединяет ряд перспективных сельскохозяйственных предприятий, входит в
+      состав АФК «Система».
+      <br />
+      <br />
+      Активы расположены в наиболее благоприятных регионах с точки зрения
+      климата, урожайности и логистики: Краснодарском и Ставропольском краях, а
+      также в Ростовской области.
+    </div>
+  </Parallax>
+
   <h1 id="category">Категории</h1>
 
   <div class="category">
@@ -16,19 +29,6 @@
       </div>
     </router-link>
   </div>
-
-  <Parallax :path="require('@/assets/img/parallax_pic1.jpg')" position="center">
-    <div class="parallax__text">
-      Агрохолдинг «СТЕПЬ» — одна из крупнейших аграрных компаний юга России,
-      объединяет ряд перспективных сельскохозяйственных предприятий, входит в
-      состав АФК «Система».
-      <br />
-      <br />
-      Активы расположены в наиболее благоприятных регионах с точки зрения
-      климата, урожайности и логистики: Краснодарском и Ставропольском краях, а
-      также в Ростовской области.
-    </div>
-  </Parallax>
 </template>
 
 <script lang="ts">
@@ -70,6 +70,7 @@ export default defineComponent({
   margin: 0 auto;
   padding: 16px;
   font-size: 32px;
+  margin-top: 36px;
   font-weight: 500;
 }
 .category {
@@ -77,7 +78,6 @@ export default defineComponent({
   padding: 16px;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 36px;
   flex-direction: row;
   justify-content: center;
 
