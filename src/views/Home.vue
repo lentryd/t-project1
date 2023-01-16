@@ -1,57 +1,131 @@
 <template>
-	<Cover :path="require('@/assets/img/wood_sprite.jpg')" />
+  <h1 id="category">Категории</h1>
 
-	<Headline> "Аватар"<span>что же это такое?</span> </Headline>
+  <div class="category">
+    <router-link
+      v-for="c in category"
+      :to="c.link"
+      custom
+      v-slot="{ navigate }"
+    >
+      <div class="item" @click="navigate">
+        <div class="item__image">
+          <img :src="c.image" />
+        </div>
+        <div class="item__title" v-text="c.title" />
+      </div>
+    </router-link>
+  </div>
 
-	<SwipeBlock>
-		<Post
-			:image="require('@/assets/img/avatar.png')"
-			title="Трейлер"
-			subtitle="К фильму 'Аватар'"
-			text="Трейлер –— часть фильма, 
-			которая предоставляет зрителю возможность просмотреть его краткое содержание, 
-			не пересказывая важные части сюжета (т.е. без спойлеров).
-			Это эффективный способ заинтересовать зрителя и расположить его к дальнейшому просмотру.
-			(Трейлер представлен ниже)"
-		/>
-	</SwipeBlock>
-
-	<SwipeBlock>
-		<Player :path="require('@/assets/video/movie_trailer.mp4')" />
-	</SwipeBlock>
-
-	<SwipeBlock>
-		<Post
-			reverse
-			link="https://miro.com/app/board/uXjVPQlcsVc=/"
-			:image="require('@/assets/img/miro.png')"
-			title="Miro"
-			subtitle="Помощник в координации"
-			text="Miro –— удобная среда для планирования процесса работы.
-			Он идеально подходит для больших проектов (с большими командами),
-			для грамотного планирования дальнейших действий всей команды и позволяет избегать недопонимания среди сокомандников.
-			(Для просмотра нажмите на фото)"
-		/>
-	</SwipeBlock>
-
-	<SwipeBlock>
-		<Post
-			link="https://drive.google.com/drive/folders/1DEJo5qr-KtAbvK9lk-eeLunKPqfbj1uB?usp=share_link"
-			:image="require('@/assets/img/pp.png')"
-			title="Презентация"
-			subtitle="Краткая экскурсия по проекту"
-			text="Презентация —– незаменимый помощник каждого из нас.
-			Это самый удобный способ рассказать о своем проекте лично, 
-			интересно, красиво, без воды, без огромного количества информации, лишь слайды и ваша речь.
-			(Для просмотра нажмите на фото)"
-		/>
-	</SwipeBlock>
+  <Parallax :path="require('@/assets/img/parallax_pic1.jpg')" position="center">
+    <div class="parallax__text">
+      Агрохолдинг «СТЕПЬ» — одна из крупнейших аграрных компаний юга России,
+      объединяет ряд перспективных сельскохозяйственных предприятий, входит в
+      состав АФК «Система».
+      <br />
+      <br />
+      Активы расположены в наиболее благоприятных регионах с точки зрения
+      климата, урожайности и логистики: Краснодарском и Ставропольском краях, а
+      также в Ростовской области.
+    </div>
+  </Parallax>
 </template>
 
 <script lang="ts">
-	import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
-	export default defineComponent({
-		name: 'Home',
-	});
+export default defineComponent({
+  name: "Home",
+
+  data: () => ({
+    category: [
+      {
+        link: "/rybolovstvo",
+        title: "Рыболовство",
+        image: require("@/assets/img/fish.svg"),
+      },
+      {
+        link: "/jivotnovodstvo",
+        title: "Животноводство",
+        image: require("@/assets/img/cow.svg"),
+      },
+      {
+        link: "/rastenievodstvo",
+        title: "Растениеводство",
+        image: require("@/assets/img/plant.svg"),
+      },
+      {
+        link: "/pererabotka",
+        title: "Переработка",
+        image: require("@/assets/img/milk.svg"),
+      },
+    ],
+  }),
+});
 </script>
+
+<style lang="scss" scoped>
+#category {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 16px;
+  font-size: 32px;
+  font-weight: 500;
+}
+.category {
+  gap: 16px;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+
+  .item {
+    gap: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &:hover {
+      .item__image img {
+        opacity: 1;
+      }
+
+      .item__title {
+        color: #060911;
+      }
+    }
+
+    .item__image {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        object-fit: contain;
+        transition: opacity 0.35s ease-in-out;
+      }
+    }
+
+    .item__title {
+      font-size: 20px;
+      transition: color 0.35s ease-in-out;
+      font-weight: 400;
+    }
+  }
+}
+
+.parallax__text {
+  color: #fff;
+  padding: 50px 60px;
+  font-size: 26px;
+  text-align: center;
+  line-height: 32px;
+}
+</style>

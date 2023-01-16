@@ -19,18 +19,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@font-face {
-  font-family: "NordBold";
-  src: url("./assets/fonts/NordBold.woff") format("woff");
-}
-@font-face {
-  font-family: "Sprite Graffiti";
-  src: url("./assets/fonts/SpriteGraffiti.woff") format("woff");
-}
-@font-face {
-  font-family: "RubikDistressed";
-  src: url("./assets/fonts/RubikDistressed.woff") format("woff");
-}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&display=swap");
 
 html {
   margin: 0;
@@ -43,15 +32,15 @@ html {
 
 body {
   width: 100%;
-  color: rgba(185, 215, 255, 0.5);
+  color: #060911b3;
   margin: 0;
   height: auto;
   font-size: 1rem;
   font-style: normal;
   line-height: 2;
   font-weight: 300;
-  font-family: "NordBold", Helvetica, Arial, sans-serif;
-  background-color: #0b0e26;
+  font-family: "NOTO SANS", Roboto, sans-serif;
+  background-color: #fffeea;
 }
 
 *,
