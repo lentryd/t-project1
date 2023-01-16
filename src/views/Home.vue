@@ -77,6 +77,7 @@ export default defineComponent({
   padding: 16px;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 36px;
   flex-direction: row;
   justify-content: center;
 
