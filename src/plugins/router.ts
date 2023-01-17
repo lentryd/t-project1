@@ -36,14 +36,17 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition;
-    } else if (to.hash) {
-      return { el: to.hash, behavior: "smooth" };
-    } else {
-      return { left: 0, top: 0 };
-    }
+  scrollBehavior(to, from, scroll) {
+    return new Promise((resolve) => {
+      setTimeout(
+        () => {
+          if (!to.hash && !scroll) resolve({ top: 0, behavior: "smooth" });
+          else if (scroll) resolve({ ...scroll, behavior: "smooth" });
+          else resolve({ el: to.hash, behavior: "smooth" });
+        },
+        to.path == from.path ? 0 : 500
+      );
+    });
   },
 });
 

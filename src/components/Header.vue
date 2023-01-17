@@ -27,7 +27,7 @@ export default defineComponent({
       },
       {
         title: "Категории",
-        path: { hash: "#category" },
+        path: { path: "/", hash: "#category" },
       },
     ],
   }),
