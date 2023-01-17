@@ -81,7 +81,7 @@ export default defineComponent({
 #category {
   width: fit-content;
   margin: 0 auto;
-  padding: 16px;
+  padding: 0;
   font-size: 32px;
   margin-top: 36px;
   font-weight: 500;
