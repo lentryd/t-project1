@@ -7,12 +7,7 @@
     </router-link>
 
     <nav>
-      <router-link
-        v-for="l in links"
-        :to="l.path"
-        v-text="l.title"
-        active-class="active"
-      />
+      <router-link v-for="l in links" :to="l.path" v-text="l.title" />
     </nav>
   </header>
 </template>
@@ -32,7 +27,7 @@ export default defineComponent({
       },
       {
         title: "Категории",
-        path: "/about",
+        path: { hash: "#category" },
       },
     ],
   }),

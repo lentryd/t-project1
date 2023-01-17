@@ -8,6 +8,8 @@
       </main>
     </Transition>
   </router-view>
+
+  <Footer />
 </template>
 
 <script lang="ts">
@@ -20,6 +22,7 @@ export default defineComponent({
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0");
 
 html {
   margin: 0;
