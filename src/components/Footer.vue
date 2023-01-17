@@ -5,14 +5,14 @@
     <div class="location">
       <div class="location__title">
         <span class="material-symbols-rounded"> location_on </span>
-        <span>РОСТОВ-НА-ДОНУ</span>
+        <span>ПРИМОРСКИЙ КРАЙ</span>
       </div>
       <span class="location__description">
-        344002, Ростов-на-Дону, Соборный пер., д. 19
+        692693, Приморский край, Ханкайский район
         <br />
-        Тел: +7 (863) 309-07-10
+        Тел: 8 (800) 555-35-35
         <br />
-        info@ahstep.ru
+        info@veles.ru
       </span>
     </div>
   </footer>
