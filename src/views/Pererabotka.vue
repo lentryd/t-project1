@@ -7,3 +7,9 @@ export default defineComponent({
   name: "Pererabotka",
 });
 </script>
+
+// На главной там такая хуйня
+
+Всем привет я Олег
+
+потом картинка эта /src/korova.png
