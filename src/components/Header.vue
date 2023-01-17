@@ -1,6 +1,6 @@
 <template>
   <header>
-    <router-link to="/" class="title title__link" v-text="title" />
+    <div></div>
 
     <router-link to="/" class="logo__link">
       <img src="@/assets/img/logo.png" />
