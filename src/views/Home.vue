@@ -32,19 +32,30 @@
 			</div>
 		</router-link>
 	</div>
+
+	<Parallax :path="require('@/assets/img/parallax_pic1.jpg')" position="center">
+		<div class="parallax__text">
+			Агрохолдинг «СТЕПЬ» — одна из крупнейших аграрных компаний юга России,
+			объединяет ряд перспективных сельскохозяйственных предприятий, входит в
+			состав АФК «Система».
+			<br />
+			<br />
+			Активы расположены в наиболее благоприятных регионах с точки зрения
+			климата, урожайности и логистики: Краснодарском и Ставропольском краях, а
+			также в Ростовской области.
+		</div>
+	</Parallax>
 </template>
 
 <script lang="ts">
 	import { defineComponent } from 'vue';
-
 	export default defineComponent({
 		name: 'Home',
-
 		data: () => ({
 			category: [
 				{
 					link: '/rybolovstvo',
-					title: 'Аквакультура',
+					title: 'Рыболовство',
 					image: require('@/assets/img/fish.svg'),
 				},
 				{
@@ -71,7 +82,7 @@
 	#category {
 		width: fit-content;
 		margin: 0 auto;
-		padding: 16px;
+		padding: 0;
 		font-size: 32px;
 		margin-top: 36px;
 		font-weight: 500;
@@ -81,33 +92,29 @@
 		padding: 16px;
 		display: flex;
 		flex-wrap: wrap;
+		margin-bottom: 36px;
 		flex-direction: row;
 		justify-content: center;
-
 		.item {
 			gap: 8px;
 			cursor: pointer;
 			display: flex;
 			align-items: center;
 			flex-direction: column;
-
 			&:hover {
 				.item__image img {
 					opacity: 1;
 				}
-
 				.item__title {
 					color: #060911;
 				}
 			}
-
 			.item__image {
 				width: 80px;
 				height: 80px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-
 				img {
 					width: 100%;
 					height: 100%;
@@ -116,7 +123,6 @@
 					transition: opacity 0.35s ease-in-out;
 				}
 			}
-
 			.item__title {
 				font-size: 20px;
 				transition: color 0.35s ease-in-out;
@@ -124,7 +130,6 @@
 			}
 		}
 	}
-
 	.parallax__text {
 		color: #fff;
 		padding: 50px 60px;
