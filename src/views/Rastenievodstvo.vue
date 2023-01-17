@@ -99,7 +99,7 @@ export default defineComponent({
   justify-content: center;
 
   .plant {
-    flex-basis: 500px;
+    flex-basis: 400px;
     margin: 1rem;
     display: flex;
     align-items: center;
