@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div></div>
+    <router-link to="/" class="title title__link" v-text="title" />
 
     <router-link to="/" class="logo__link">
       <img src="@/assets/img/logo.png" />
@@ -19,7 +19,7 @@ export default defineComponent({
   name: "Header",
 
   data: () => ({
-    title: "Т22СХ2-08",
+    title: "Команда №3",
     links: [
       {
         title: "Основная",
